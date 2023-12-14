@@ -1,0 +1,11 @@
+protocol TextReducerProtocol {
+    mutating func reduce(_ currentState: TextSettings,
+                         _ action: TextModification) -> TextSettings
+}
+
+struct TextReducer: TextReducerProtocol {
+    
+    mutating func reduce(_ currentState: TextSettings,
+                         _ action: TextModification) -> TextSettings {
+        
+        var newText = currentState
